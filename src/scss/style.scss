@@ -1,0 +1,213 @@
+@import '../component/header/header.scss';
+@import '../scss/variables.scss';
+@import '../component/content/hero/hero.scss';
+@import '../component/content/skills/skills.scss';
+@import '../component/content/portfolio/portfolio.scss';
+@import '../component/content/video/video.scss';
+@import '../component/content/price/price.scss';
+@import '../component/content/contacts/contacts.scss';
+@import '../component/content/footer/footer.scss';
+@import './modal.scss';
+
+html{
+    padding: 0;
+    margin: 0;
+}
+
+//THEME WHITE
+html.sun{
+
+    //SKILLS
+    & .section-skills{
+        background-color: $colorWhite;
+        color:$colorDark;
+       
+        & .skills__title{
+            .skills-left__underline,
+            .skills-right__underline{
+                 background-color: $colorDark;
+            }
+            h2{
+                color: $colorDark;
+            }
+        }
+
+        .skills__items {
+            color: $colorDark;
+        }
+    }
+
+    //PORTFOLIO
+    & .section-portfolio{
+        background-color: $colorWhite;
+        color:$colorDark;
+
+        & .portfolio__title{
+            .portfolio-left__underline,
+            .portfolio-right__underline{
+                 background-color: $colorDark;
+            }
+            h2{
+                color: $colorDark;
+            }
+        }
+        & .button-portfolio{
+            color:$colorDark
+        }
+
+        & .button-dark.activ{
+            color: $colorWhite;
+        }
+    }
+
+
+    //VIDEO
+    & .section-video{
+        background-color: $colorWhite;
+        color:$colorDark;
+
+        & .video__title{
+            .video-left__underline,
+            .video-right__underline{
+                 background-color: $colorDark;
+            }
+            h2{
+                color: $colorDark;
+            }
+        }
+
+    }
+
+
+    //PRICE
+    & .section-price{
+        background-color: $colorWhite;
+        color:$colorDark;
+
+        & .price__title{
+            .price-left__underline,
+            .price-right__underline{
+                 background-color: $colorDark;
+            }
+            h2{
+                color: $colorDark;
+            }
+        }
+
+        & .price__items{
+            color: $colorDark;
+        }
+
+        & .button-dark.activ{
+            color: $colorWhite;
+        }
+    }
+    
+}
+
+section{
+    border:0;
+    outline: none;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    outline: none;
+    font-size: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: $colorWhite;
+    cursor: pointer;
+}
+
+li{
+    list-style: none;
+}
+
+body{
+    font-family: $fontFamilyInter;
+    box-sizing: border-box;
+}
+
+button{
+    border:0;
+    cursor: pointer;
+}
+
+.wrapper{
+    position: relative;
+    max-width: 1440px;
+    margin:0 auto;
+}
+
+
+.container{
+    padding:0 20px;
+    height: 100%;
+}
+
+
+.button-gold{
+    width:220px;
+    height:55px;
+    background:$colorGold;
+    transition: .5s all;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+.button-dark{
+    width:220px;
+    height:55px;
+    background:transparent;
+    transition: .5s all;
+    border:1px solid $colorGold;
+    color:$colorGold;
+}
+
+.button-dark.activ{
+    background-color:  $colorGold;
+    color:$colorDark;
+}
+
+.button-gold::before{
+    content: '';
+    position: absolute;
+    top:0;
+    left:0px;
+    width:100%;
+    height:inherit;
+    transition: all .3s;
+}
+
+.button-gold::after{
+    content: '';
+    position: absolute;
+    top:0;
+    right:0px;
+    width:100%;
+    height:inherit;
+    transition: all .3s;
+}
+
+
+.button-gold:hover::before{
+    left:100%;
+    background: #333;
+}
+
+.button-gold:hover::after{
+    right:100%;
+    background: #333;
+}
+
+.button-gold:hover, .button-dark:hover{
+    color: $colorWhite;
+    border-radius: 5px;
+
+}

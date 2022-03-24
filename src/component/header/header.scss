@@ -1,0 +1,173 @@
+@import '../../scss/variables.scss';
+
+.header{
+
+    &.activ{
+        position: fixed;
+        transition: 1;
+        opacity: 1;
+        max-width: 100%;
+        background-color: $colorDark;
+        z-index: 9999;
+        transition: all 1s;
+
+    }
+    transition: all 1s;
+    position: absolute;
+    top:0px;
+    left:0%;
+    width:100%;
+    &  .header__top{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 0;
+
+        & .navigation{
+            & .navigation__list{
+                display: flex;
+
+                li{
+                    margin-right:30px;
+
+                    a{
+                        transition: all .2s;
+                        color: $colorWhite;
+                        display: block;
+                        padding: 10px 0;
+
+                        &.activ{
+                            color:$colorGold;
+                        }
+                    }
+
+                    a:hover{
+                        color: $colorGold;
+                    }
+                }
+
+            }
+        }
+
+        @media (max-width:"768px") {
+            .close-mobile{
+                width:45px;
+                height: 45px;
+                position: absolute;
+                right:66px;
+                top:23px;
+                background-image: url('../img/icon/close.png');
+                object-fit: contain;
+                cursor: pointer;
+            }
+
+            .close-mobile:hover{
+                background-image: url('../img/icon/close-hover.png');
+            }
+
+            & .navigation{
+                position: fixed;
+                top: 0px;
+                right: -100%;
+                background: $colorDark;
+                height: 100vh;
+                width: 400px;
+                transition: all 1s;
+                z-index: 999;
+
+                & .navigation__list{
+                    flex-direction: column;
+                    padding:100px 0 0 50px;
+                }
+
+                & .close-navigation{
+                    display: block;
+                }
+            }
+
+            & .navigation.activ{
+                right: 0;
+            }
+            
+            
+        }
+
+        @media (max-width:"544px") {
+            & .navigation{
+                width: 100%;
+            }
+        }
+
+        & .header__nav{
+            display: flex;
+            align-items: center;
+
+            & .menu-mobile{
+                display: none;
+                width:40px; 
+                height:50px;
+                background-image: url('../img/icon/menu.png');
+                background-repeat: no-repeat;
+                margin-left:20px;
+                cursor: pointer;
+            }
+
+            & .switch-theme{
+                width:41px;
+                height:45px;
+                background-repeat: no-repeat;
+                object-fit: contain;
+                margin-left:20px;
+                cursor: pointer;
+
+                &.sun{
+                    background-image: url('../img/icon/sun.svg');
+
+                    &:hover{
+                        background-image: url('../img/icon/sun-hover.svg');
+                    }
+                }
+                
+                &.moon{
+                    background-image: url('../img/icon/moon.svg');
+
+                    &:hover{
+                        background-image: url('../img/icon/moon-hover.svg');
+                    }
+                }
+            }
+
+
+            @media (max-width:"768px") {
+                & .menu-mobile{
+                    display: block;
+                }
+
+            }
+
+            & .menu-mobile:hover{
+                background-image: url('../img/icon/menu-hover.png');
+            }
+        }
+
+        & .switch__language{
+            & .language__list{
+                display: flex;
+                li{
+                    a, span{
+                        color: $colorWhite;
+                    }
+
+                    span{
+                        margin:0 8px;
+                    }
+
+                    a.activ{
+                        color: $colorGold;
+                    }
+
+                }
+            }
+        }
+    }
+}
