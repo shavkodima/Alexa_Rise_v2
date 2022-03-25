@@ -8,9 +8,9 @@ import modals from './modal'
 import validForm from './validForm';
 
 switchTheme()
-switchTranslate()
+modals()
 getPortfolio()
 mobileMenu()
 scrollHeader()
-modals()
 validForm()
+switchTranslate()

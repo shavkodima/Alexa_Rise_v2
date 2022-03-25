@@ -37,9 +37,11 @@ const i18Obj = {
       'price-description-3-span-5': 'Make up, visage, hairstyle',
       'order': 'Order shooting',
       'contact-me': 'Contact me',
-      'send-message': 'Send message'
+      'send-message': 'Send message',
+      'hello-user': 'Hi Dima'
     },
     'ru': {
+      'hello-user': 'Привет Дима',
       'skills': 'Навыки',
       'portfolio': 'Портфолио',
       'video': 'Видео',
