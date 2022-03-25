@@ -54,10 +54,15 @@
                     max-width: 400px;
                     border:3px solid $colorGold;
                     padding:40px 20px;
-                    margin-bottom: 75px;
                     flex:1 1 auto;
                     margin: 5px;
-                    img{
+                    transition: 1s;
+
+                    &:hover{
+                        transform: translateY(-20px);
+                    }
+
+                    & img{
                         margin-bottom: 50px;
                     }
                     & .price-item__title{
@@ -82,9 +87,17 @@
                         }
                     }
                 }
+
+                @media (max-width:768px){
+                    & .price__item{
+                        margin: 20px 0;
+                    }
+                }
             }
 
+
             @media (max-width:"768px"){
+
                 & .price__title{
                     max-width: 365px;
                 }

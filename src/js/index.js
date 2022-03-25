@@ -1,3 +1,4 @@
+
 import '../scss/style.scss';
 import getPortfolio from './portfolio'
 import mobileMenu from './mobileMenu'
@@ -7,10 +8,19 @@ import switchTranslate from './switchTranslate';
 import modals from './modal'
 import validForm from './validForm';
 
-switchTheme()
-modals()
-getPortfolio()
-mobileMenu()
-scrollHeader()
-validForm()
-switchTranslate()
+
+        getPortfolio()
+        getPortfolio()
+        switchTheme()
+        modals()
+        mobileMenu()
+        validForm()
+        switchTranslate()
+        scrollHeader()
+
+
+   
+
+
+
+

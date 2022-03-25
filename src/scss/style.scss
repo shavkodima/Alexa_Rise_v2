@@ -14,6 +14,29 @@ html{
     margin: 0;
 }
 
+.loading{
+    position: fixed;
+    top:0px;
+    left:0px;
+    background: #000;
+    width:100vw;
+    height:100vh;
+    display: block;
+    z-index: 9999999;
+    color: #fff;
+}
+
+.loading.inActiv{
+    position: fixed;
+    top:0px;
+    left:0px;
+    background: #000;
+    width:100vw;
+    height:100vh;
+    display: block;
+    z-index: 99999;
+}
+
 //THEME WHITE
 html.sun{
 
@@ -127,7 +150,13 @@ li{
     list-style: none;
 }
 
+html.sun body{
+    background-color: $colorWhite;
+}
+
 body{
+    transition: 1s;
+    background-color: $colorDark;
     font-family: $fontFamilyInter;
     box-sizing: border-box;
 }
@@ -210,4 +239,34 @@ button{
     color: $colorWhite;
     border-radius: 5px;
 
+}
+
+.button-top{
+    position: fixed;
+    bottom: 20px;
+    right: -300px;
+    width:60px;
+    height:60px;
+    color: #fff;
+    font-size: 2rem;
+    background-color: #BDAE82;
+    border-radius: 50%;
+    transition: .5s;
+}
+
+.button-top.activ{
+    right:20px;
+}
+
+.button-top:hover{
+    transform: rotate(360deg);
+    box-shadow: 0 0 10px $colorGold, 0px 0 50px $colorGold;
+}
+
+.button-top::after{
+    content: '^';
+    position: absolute;
+    left:50%;
+    top:60%;
+    transform: translate(-50%, -50%);
 }

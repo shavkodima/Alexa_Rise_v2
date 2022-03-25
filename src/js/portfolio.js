@@ -1,5 +1,5 @@
 
-const getPortfolio =()=>{
+const getPortfolio = ()=>{
     const imgSetting  ={
         autumn:{
             count:6,

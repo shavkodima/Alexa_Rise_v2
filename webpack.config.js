@@ -65,58 +65,58 @@ module.exports = {
         new CopyPlugin({
             patterns: [
                 {
-                    from: "img/portfolio",
-                    to: "img/portfolio",
+                    from: "img/",
+                    to: "img/",
                     context: "src/",
                 }
             ]
         }),
-
-        //  new HtmlWebpackPartialsPlugin({
-        //     path: path.join(__dirname, './src/component/header/header.html'),
-        //     location: 'header',
-        //     template_filename: ['index.html']
-        // }),
-        // new HtmlWebpackPartialsPlugin({
-        //     path: path.join(__dirname, pathContentHTML + '/hero/hero.html'),
-        //     location: 'main',
-        //     template_filename: ['index.html']
-        // }),
-        // new HtmlWebpackPartialsPlugin({
-        //     path: path.join(__dirname, pathContentHTML + 'skills/skills.html'),
-        //     location: 'main',
-        //     template_filename: ['index.html']
-        // }),
-        // new HtmlWebpackPartialsPlugin({
-        //     path: path.join(__dirname, pathContentHTML + 'portfolio/portfolio.html'),
-        //     location: 'main',
-        //     template_filename: ['index.html']
-        // }),
-        // new HtmlWebpackPartialsPlugin({
-        //     path: path.join(__dirname, pathContentHTML + 'video/video.html'),
-        //     location: 'main',
-        //     template_filename: ['index.html']
-        // }),
-        // new HtmlWebpackPartialsPlugin({
-        //     path: path.join(__dirname, pathContentHTML + 'price/price.html'),
-        //     location: 'main',
-        //     template_filename: ['index.html']
-        // }),
-        // new HtmlWebpackPartialsPlugin({
-        //     path: path.join(__dirname, pathContentHTML + 'contacts/contacts.html'),
-        //     location: 'main',
-        //     template_filename: ['index.html']
-        // }),
-        // new HtmlWebpackPartialsPlugin({
-        //     path: path.join(__dirname, pathContentHTML + 'footer/footer.html'),
-        //     location: 'footer',
-        //     template_filename: ['index.html']
-        // }),
-
         new HtmlWebpackPlugins({
             template: path.resolve(__dirname, './src/index.html'),
             filename: 'index.html'
         }),
+
+         new HtmlWebpackPartialsPlugin({
+            path: path.join(__dirname, './src/component/header/header.html'),
+            location: 'header',
+            template_filename: ['index.html']
+        }),
+        new HtmlWebpackPartialsPlugin({
+            path: path.join(__dirname, pathContentHTML + '/hero/hero.html'),
+            location: 'main',
+            template_filename: ['index.html']
+        }),
+        new HtmlWebpackPartialsPlugin({
+            path: path.join(__dirname, pathContentHTML + 'skills/skills.html'),
+            location: 'main',
+            template_filename: ['index.html']
+        }),
+        new HtmlWebpackPartialsPlugin({
+            path: path.join(__dirname, pathContentHTML + 'portfolio/portfolio.html'),
+            location: 'main',
+            template_filename: ['index.html']
+        }),
+        new HtmlWebpackPartialsPlugin({
+            path: path.join(__dirname, pathContentHTML + 'video/video.html'),
+            location: 'main',
+            template_filename: ['index.html']
+        }),
+        new HtmlWebpackPartialsPlugin({
+            path: path.join(__dirname, pathContentHTML + 'price/price.html'),
+            location: 'main',
+            template_filename: ['index.html']
+        }),
+        new HtmlWebpackPartialsPlugin({
+            path: path.join(__dirname, pathContentHTML + 'contacts/contacts.html'),
+            location: 'main',
+            template_filename: ['index.html']
+        }),
+        new HtmlWebpackPartialsPlugin({
+            path: path.join(__dirname, pathContentHTML + 'footer/footer.html'),
+            location: 'footer',
+            template_filename: ['index.html']
+        }),
+
     ]
 
 }

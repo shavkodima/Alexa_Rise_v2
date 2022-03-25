@@ -21,7 +21,8 @@ const validForm = () =>{
         if(target.classList.contains('submit-form')){
             e.preventDefault()
                 if(validInput(forms.elements)){
-                    alert("Форма заполнена")
+                    alert("Форма заполнена");
+                    forms.reset()
                 }
             }
     })

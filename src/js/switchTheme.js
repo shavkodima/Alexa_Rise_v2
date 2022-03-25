@@ -1,6 +1,5 @@
 const switchTheme = () =>{
     const html = document.querySelector('html')
-    html.classList.add('dark')
     const switchBtn = document.querySelector('.switch-theme');
 
 

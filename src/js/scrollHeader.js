@@ -13,10 +13,9 @@ const scrollHeader = ()=>{
         entries.forEach((entry)=>{
             if(entry.isIntersecting){
                 navigationLink.forEach((elem)=>{
-                    elem.addEventListener('click', scrollToElem)
                     elem.classList.remove('activ')
                     const link = elem.getAttribute('href').replace('#', '')
-                    const dataEntry = entry.target.getAttribute('data-scroll');
+                    const dataEntry = entry.target.getAttribute('data-set');
                     if(link === dataEntry){
                         elem.classList.add('activ')
                     }
@@ -24,27 +23,56 @@ const scrollHeader = ()=>{
             }
         })
     },{
-        threshold: .5,
+        threshold: 0.25,
     })
+
 
 
     section.forEach(elem=>{
-        console.log(elem);
+        console.log(elem.innerHTML);
         observer.observe(elem)
     })
-
     navigationLink.forEach(elem=>{
         elem.addEventListener('click', scrollToElem)
     })
 
+    const scrollIndicator = () =>{
+        const scrollIndicatorElem = document.querySelector('.indicator-scroll');
+        const clientHeight = document.documentElement.clientHeight;
+        const scroll = document.documentElement.scrollTop
+        const offsetHeightAll = document.body.offsetHeight - clientHeight;
+        const procentScroll = Math.ceil(scroll / offsetHeightAll * 100);
+        console.log(scrollIndicatorElem);
+        scrollIndicatorElem.style.cssText = `width:${procentScroll}%`;
+    }
+
+    const scrollUp = (e)=>{
+        e.preventDefault()
+        const wrapper = document.querySelector('.wrapper');
+        wrapper.scrollIntoView({behavior:'smooth'})
+    }
 
 
 
     window.addEventListener('scroll', (e)=>{
-       const top = document.documentElement.scrollTop;
-       top > 300 ? header.classList.add('activ') : header.classList.remove('activ')
+        const btnTop = document.querySelector('.button-top')
+        const top = document.documentElement.scrollTop;
+       if(top > 300){
+            header.classList.add('activ')
+            btnTop.classList.add('activ')
+            btnTop.addEventListener('click', scrollUp)
+       }else{
+            header.classList.remove('activ')
+            btnTop.classList.remove('activ')
+
+       } 
+
        top === 0 ? navigationLink[0].classList.remove('activ'):"";
+       scrollIndicator()
     })
+
+
+    
 
 
 

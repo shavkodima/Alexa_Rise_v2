@@ -23,6 +23,16 @@
         justify-content: space-between;
         padding: 20px 0;
 
+        & .indicator-scroll{
+            position: absolute;
+            height: 5px;
+            background: $colorGold;
+            left: 0px;
+            top: 0px;
+            transition: 1s;
+            opacity: 1;
+        }
+
         & .navigation{
             & .navigation__list{
                 display: flex;
