@@ -1,4 +1,4 @@
-const scrollHeader = ()=>{
+const scroll = ()=>{
     const header = document.querySelector('header');
     const section = document.querySelectorAll('section.scroll')
     const navigationLink = document.querySelectorAll('.navigation__list li a')
