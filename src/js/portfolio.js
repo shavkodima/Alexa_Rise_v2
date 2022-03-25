@@ -1,4 +1,3 @@
-import '../img/portfolio/autumn/portfolio-img (1).png';
 
 const getPortfolio =()=>{
     const imgSetting  ={
