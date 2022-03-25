@@ -78,4 +78,4 @@ const scroll = ()=>{
 
 }
 
-export default scrollHeader;
+export default scroll;
