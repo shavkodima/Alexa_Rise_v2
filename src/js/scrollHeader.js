@@ -17,30 +17,33 @@ const scrollHeader = ()=>{
                     elem.classList.remove('activ')
                     const link = elem.getAttribute('href').replace('#', '')
                     const dataEntry = entry.target.getAttribute('data-scroll');
-                    console.log(link === dataEntry);
                     if(link === dataEntry){
                         elem.classList.add('activ')
                     }
                 })
-            }else{
-                navigationLink[0].classList.remove('activ')
             }
         })
     },{
-        threshold: .2
+        threshold: .5,
     })
 
 
     section.forEach(elem=>{
+        console.log(elem);
         observer.observe(elem)
     })
+
+    navigationLink.forEach(elem=>{
+        elem.addEventListener('click', scrollToElem)
+    })
+
 
 
 
     window.addEventListener('scroll', (e)=>{
        const top = document.documentElement.scrollTop;
        top > 300 ? header.classList.add('activ') : header.classList.remove('activ')
-
+       top === 0 ? navigationLink[0].classList.remove('activ'):"";
     })
 
 

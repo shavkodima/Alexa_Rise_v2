@@ -30,12 +30,17 @@
                 display: flex;
                 flex-direction: column;
 
+                .error-valid{
+                    border: 1px solid red;
+                }
+                
                 input, textarea{
                     background: #00000052;
                     height:50px;
                     border:2px solid $colorGold;
                     text-indent: 20px;
                     color: $colorGold;
+
                 }
 
                 input, textarea, button{
