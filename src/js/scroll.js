@@ -5,6 +5,8 @@ const scroll = ()=>{
 
     const scrollToElem = (e)=>{
         e.preventDefault()
+        const nav = document.querySelector('.navigation')
+        nav.classList.remove('activ')
         const link = e.target.getAttribute('href').replace('#', '')
         document.querySelector(`.${link}`).scrollIntoView({behavior:'smooth'})
     }
@@ -29,7 +31,6 @@ const scroll = ()=>{
 
 
     section.forEach(elem=>{
-        console.log(elem.innerHTML);
         observer.observe(elem)
     })
     navigationLink.forEach(elem=>{
@@ -42,7 +43,6 @@ const scroll = ()=>{
         const scroll = document.documentElement.scrollTop
         const offsetHeightAll = document.body.offsetHeight - clientHeight;
         const procentScroll = Math.ceil(scroll / offsetHeightAll * 100);
-        console.log(scrollIndicatorElem);
         scrollIndicatorElem.style.cssText = `width:${procentScroll}%`;
     }
 
