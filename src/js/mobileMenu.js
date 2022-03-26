@@ -5,10 +5,12 @@ const mobileMenu = ()=>{
 
     btnOpen.addEventListener('click', (e)=>{
         nav.classList.add('activ')
+        document.body.style.cssText = ' overflow-y: hidden;'
     })
 
     btnClose.addEventListener('click', (e)=>{
         nav.classList.remove('activ')
+        document.body.style.cssText = ''
     })
 }
 
