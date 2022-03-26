@@ -9,7 +9,7 @@ const scroll = ()=>{
         const link = e.target.getAttribute('href').replace('#', '')
         document.querySelector(`.${link}`).scrollIntoView({behavior:'smooth'})
         nav.classList.remove('activ')
-        document.body.cssText = ''
+        document.body.style.cssText = ''
     }
 
     const observer = new IntersectionObserver((entries)=>{
